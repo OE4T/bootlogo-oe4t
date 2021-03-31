@@ -1,0 +1,17 @@
+OE4T Boot Logo
+
+This repository hosts pre-cooked bitmaps used for the default bootlogo-custom
+implementation.
+
+These were generated from the OE4T logo with the following imagemagick command:
+
+    convert.im7 ${_input_file} \
+        -type truecolor \
+        -resize ${W}x${H}\> \
+        -gravity center \
+        -background ${SPLASH_GRAPHIC_BACKGROUND} \
+        -extent ${W}x${H} ${B}/logo-${H}.bmp
+
+Note the format of the config_file differs slightly from that used by the L4T
+genbmpblob_L4T.sh script. The config_file used by L4T should not have semicolon
+line endings.
