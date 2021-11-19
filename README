@@ -7,6 +7,7 @@ These were generated from the OE4T logo with the following imagemagick command:
 
     convert.im7 ${_input_file} \
         -type truecolor \
+        -colorspace RGB \
         -resize ${W}x${H}\> \
         -gravity center \
         -background ${SPLASH_GRAPHIC_BACKGROUND} \
